@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" conent="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="description" content="Derek's personal D&D bestiary">
+        <link href="{{ url_for('static', filename='assets/style.css') }}" rel="stylesheet" >
+        <title>Derek's Bestiary</title>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a href="/index.html">Derek's Bestiary</a>
+            <a href="/add_beast.html">Add a New Beast!</a>
+            <div class="wrapper">
+                <a href="/cr.125.html">CR 1/8</a>
+                <a href="/cr.25.html">CR 1/4</a>
+                <a href="/cr.5.html">CR 1/2</a>
+                <a href="/cr1.html">CR 1</a>
+                <a href="/cr2.html">CR 2</a>
+                <a href="/cr3.html">CR 3</a>
+            </div>
+        </header>
+    <main>
+        <form action="/beast.html" method="post">
+            <div>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Name" type="text">
+            </div>
+        </form>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>CR</th>
+              <th>HP</th>
+              <th>AC</th>
+              <th>Speed</th>
+              <th>Strength</th>
+              <th>Dexterity</th>
+              <th>Constitution</th>
+              <th>Intelligence</th>
+              <th>Wisdom</th>
+              <th>Charisma</th>
+              <th>Languages</th>
+              <th>Actions</th>
+            </tr>
+            <tr>
+                {% for beast in beasts %}
+              <td>{{beast.name}}</td>
+              <td>{{beast.cr}}</td>
+              <td>{{beast.hp}}</td>
+              <td>{{beast.ac}}</td>
+              <td>{{beast.speed}}</td>
+              <td>{{beast.str}}</td>
+              <td>{{beast.dex}}</td>
+              <td>{{beast.con}}</td>
+              <td>{{beast.inte}}</td>
+              <td>{{beast.wis}}</td>
+              <td>{{beast.cha}}</td>
+              <td>{{beast.languages}}</td>
+              <td>{{beast.actions}}</td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </table>
+    </main>
+    <footer>
+        <div>
+            <a href="#top">Back to Top</a>
+        </div>
+    </footer>
+
+    </body>

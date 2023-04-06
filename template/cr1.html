@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" conent="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="description" content="Derek's personal D&D bestiary">
+        <link href="{{ url_for('static', filename='assets/style.css') }}" rel="stylesheet" >
+        <title>Derek's Bestiary</title>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a href="/index.html">Derek's Bestiary</a>
+            <a href="/add_beast.html">Add a New Beast!</a>
+            <div class="wrapper">
+                <a href="/cr.125.html">CR 1/8</a>
+                <a href="/cr.25.html">CR 1/4</a>
+                <a href="/cr.5.html">CR 1/2</a>
+                <a href="/cr1.html">CR 1</a>
+                <a href="/cr2.html">CR 2</a>
+                <a href="/cr3.html">CR 3</a>
+            </div>
+        </header>
+
+    <main>
+        <h1>CR 1</h1>
+        {% for beast in beasts %}
+        <ul>
+            <il><a href="/beast.html">{{ beast.name }}</a></il>
+        </ul>
+        {% endfor %}
+    </main>
+    <footer>
+        <div>
+            <a href="#top">Back to Top</a>
+        </div>
+    </footer>
+
+    </body>
