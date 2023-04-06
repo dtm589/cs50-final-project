@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" conent="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="description" content="Derek's personal D&D bestiary">
+        <link href="{{ url_for('static', filename='assets/style.css') }}" rel="stylesheet" >
+        <title>Derek's Bestiary</title>
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a href="/index.html">Derek's Bestiary</a>
+            <a href="/add_beast.html">Add a New Beast!</a>
+            <div class="wrapper">
+                <a href="/cr.125.html">CR 1/8</a>
+                <a href="/cr.25.html">CR 1/4</a>
+                <a href="/cr.5.html">CR 1/2</a>
+                <a href="/cr1.html">CR 1</a>
+                <a href="/cr2.html">CR 2</a>
+                <a href="/cr3.html">CR 3</a>
+            </div>
+        </header>
+
+    <main>
+        <form action="/add_beast.html" method="post">
+            <div>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Name" type="text">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="CR" name="CR" placeholder="CR" type="int">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="HP" name="HP" placeholder="HP" type="int">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="AC" name="AC" placeholder="AC" type="int">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="speed" name="speed" placeholder="Speed" type="int">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="str" name="str" placeholder="Strength" type="int">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="dex" name="dex" placeholder="Dexterity" type="int">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="con" name="con" placeholder="Constitution" type="int">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="inte" name="inte" placeholder="Intelligence" type="int">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="wis" name="wis" placeholder="Wisdom" type="int">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="cha" name="cha" placeholder="Charisma" type="int">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="languages" name="languages" placeholder="Languages" type="text">
+            </div>
+            <div>
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="actions" name="actions" placeholder="Actions" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Add Beast</button>
+        </form>
+
+    </main>
+    <footer>
+        <div>
+            <a href="#top">Back to Top</a>
+        </div>
+    </footer>
+
+    </body>
